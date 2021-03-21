@@ -75,9 +75,11 @@ and on your `src/manifest.json`:
 After the development of your extension run the command
 
 ```
-$ NODE_ENV=production yarn run build
+$ NODE_ENV=production yarn run build && NODE_ENV=production yarn run minify
 ```
 Now, the content of `build` folder will be the extension ready to be submitted to the Chrome Web Store. Just take a look at the [official guide](https://developer.chrome.com/webstore/publish) to more infos about publishing.
+
+**New: Add esbuild to minify the bundle code**
 
 ## Secrets
 If you are developing an extension that talks with some API you probably are using different keys for testing and production. Is a good practice you not commit your secret keys and expose to anyone that have access to the repository.
